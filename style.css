@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #2b2b2b;
+}
+
+/* Blog-Section Edit */
+
+#blog-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header & Nav Design */
+
+header {
+  background-color: #181818;
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  user-select: none;
+  cursor: default;
+  width: 100%;
+  height: 25%;
+  background-color: black;
+  padding: 0px 10px;
+  text-align: center;
+  align-content: center;
+}
+
+.logo {
+  color: #fd2155;
+  font-size: 50px;
+  text-shadow: -5px 0px cyan;
+}
+
+.name {
+  color: white;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: #181818;
+}
+
+.nav-opt {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-opt li {
+  list-style: none;
+  padding: 12px 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.424);
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.nav-opt li:hover {
+  background-color: #0a0a0a;
+}
+
+.nav-opt li a {
+  color: rgba(255, 255, 255, 0.558);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.4s ease;
+  display: block;
+}
+
+.nav-opt li:hover a {
+  color: white;
+}
+
+.social-icons {
+  margin-top: 10px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+
+.social-icons i {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  transform: rotate(360deg);
+}
+
+.hero-section {
+  height: 100%;
+  width: calc(100% - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.hero-intro {
+  padding-left: 30px;
+  font-size: 55px;
+}
+
+.hero-h {
+  color: #fd2155;
+  text-shadow: -5px 0px cyan;
+}
+
+.hero-title {
+  padding-left: 30px;
+  color: rgba(255, 255, 255, 0.487);
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.hero-contact {
+  margin-left: 30px;
+  padding: 6px 30px;
+  border: none;
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid cyan;
+  color: cyan;
+  transition: 0.3s ease-in;
+}
+
+.hero-contact:hover {
+  background-color: cyan;
+  color: #000000;
+}
+
+.scroll-down {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scroll-down-left,
+.scroll-down-right {
+  display: inline-block;
+  transform: rotate(90deg);
+  color: white;
+}
+
+/* Hero Contact Button Pop-Up Design */
+
+.hero-contact-popup {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backdrop-filter: blur(10px);
+}
+
+.hero-contact-window {
+  height: 300px;
+  width: 350px;
+  background-color: #181818;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid cyan;
+  border-radius: 15px;
+}
+
+.contact-options {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.email-btn,
+.whatsapp-btn,
+.phone-btn {
+  text-decoration: none;
+}
+
+.email-btn:hover i,
+.whatsapp-btn:hover i,
+.phone-btn:hover i {
+  text-shadow: -5px 0px #fd2155;
+}
+
+.option-title {
+  font-size: 10px;
+  color: white;
+}
+
+.email-btn i,
+.whatsapp-btn i,
+.phone-btn i {
+  font-size: 35px;
+  transition: 0.3s ease;
+}
+
+.email-btn i {
+  color: orange;
+}
+
+.whatsapp-btn i {
+  color: rgb(47, 255, 92);
+}
+
+.phone-btn i {
+  color: aqua;
+}
+
+.close-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.close {
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: aquamarine;
+  transition: 0.3s ease;
+}
+
+.close:hover {
+  background-color: rgb(240, 84, 84);
+  color: white;
+  box-shadow: 2px -2px 5px #21fde7;
+}
+
+.close i {
+  transition: 0.3s ease;
+}
+
+.close:hover i {
+  transform: rotate(360deg);
+}
+
+.contact-popup-text {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
