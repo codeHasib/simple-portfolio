@@ -9,12 +9,11 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #2b2b2b;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: 150px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-  "header content"
-  ;
+  grid-template-rows: 1fr;
+  grid-template-areas: "header content";
 }
 
 /* Header & Nav Design */
@@ -116,25 +115,24 @@ header {
 .content {
   grid-area: content;
   height: 100%;
-  width: calc( 100% - 150px );
-  display: grid;
-  grid-template-columns: calc( 100vw - 150px );
-  grid-template-rows: 100vh 100vh 100vh 100vh 100vh;
-  grid-template-areas:
-  "home"
-  ;
+  min-width: calc(100vw - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #home-section {
-  grid-area: home;
+  height: 100vh;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-
 .hero-section {
   height: 100%;
-  width: calc(100% - 150px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -290,7 +288,115 @@ header {
 }
 
 .contact-popup-text {
-    text-align: center;
-    color: white;
-    margin-top: 30px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Work-Section Design */
+
+#work-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  gap: 50px;
+}
+
+.work-subheading {
+  color: #fd2155;
+  font-size: 1.2rem;
+}
+
+.work-heading {
+  color: #21fde7;
+  text-shadow: -5px 0px 0px #fd2155;
+  font-size: 4em;
+}
+
+.work-intro a {
+  color: #21fde7;
+}
+
+.work-box {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.workCard {
+  height: 100%;
+  width: 450px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.workCard img {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  transition: 0.3s ease-out;
+}
+
+.work-description {
+  display: none;
+  transition: 0.3s ease;
+}
+
+.workCard:hover img {
+  display: none;
+}
+
+.workCard:hover .work-description {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.249);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border-radius: 30px;
+  gap: 20px;
+  padding: 5px 10px;
+}
+
+.work-title {
+  font-size: 16px;
+}
+
+.work-liveLink {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid rgb(255, 253, 253);
+  transition: 0.3s ease-in;
+}
+
+.work-liveLink:hover {
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.476);
+  background-color: #21fde7;
+  transform: scale(1.1);
+}
+
+.work-liveLink:hover a {
+  color: #fd2155;
+}
+
+.work-liveLink a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: block;
 }
