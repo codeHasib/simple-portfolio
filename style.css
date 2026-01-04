@@ -9,24 +9,22 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #2b2b2b;
-}
-
-/* Blog-Section Edit */
-
-#blog-section {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header content"
+  ;
 }
 
 /* Header & Nav Design */
 
 header {
+  grid-area: header;
+  position: fixed;
   background-color: #181818;
   width: 150px;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -57,6 +55,7 @@ header {
   font-size: 12px;
   font-weight: bold;
   color: white;
+  margin-bottom: 10px;
 }
 
 .nav-bar {
@@ -111,6 +110,27 @@ header {
 .social-icons i:hover {
   transform: rotate(360deg);
 }
+
+/* Home-Section Edit */
+
+.content {
+  grid-area: content;
+  height: 100%;
+  width: calc( 100% - 150px );
+  display: grid;
+  grid-template-columns: calc( 100vw - 150px );
+  grid-template-rows: 100vh 100vh 100vh 100vh 100vh;
+  grid-template-areas:
+  "home"
+  ;
+}
+
+#home-section {
+  grid-area: home;
+  display: flex;
+  align-items: center;
+}
+
 
 .hero-section {
   height: 100%;
