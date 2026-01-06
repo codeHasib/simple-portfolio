@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "poppins", sans-serif;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -103,15 +104,15 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.social-icons a {
+  transition: 0.3s ease;
+  cursor: pointer;
   color: white;
 }
 
-.social-icons i {
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.social-icons i:hover {
+.social-icons a:hover {
   transform: rotate(360deg);
 }
 
@@ -132,7 +133,7 @@ header {
       "header"
       "content";
     overflow-x: hidden;
-    }
+  }
 
   header {
     top: 0;
@@ -140,11 +141,12 @@ header {
     z-index: 999999;
     width: 100%;
     height: 100%;
-    position: sticky;
+    position: relative;
     padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #000000;
   }
 
   .brand {
@@ -152,7 +154,6 @@ header {
     width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: #2b2b2b00;
   }
 
   .logo {
@@ -174,7 +175,7 @@ header {
     font-size: 24px;
     top: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     margin: 10px 30px;
     transition: 0.3s ease-in;
   }
@@ -184,7 +185,7 @@ header {
     right: -400px;
     height: 100%;
     width: calc(100% - 50%);
-    position: absolute;
+    position: fixed;
     transition: 0.3s ease-in;
     background-color: #fd2155;
   }
@@ -298,6 +299,16 @@ header {
   color: white;
 }
 
+/* Home Design For Mobiles */
+
+@media screen and (max-width: 768px) {
+  #home-section {
+    height: 100vh;
+  }
+}
+
+
+
 /* Hero Contact Button Pop-Up Design */
 
 .hero-contact-popup {
@@ -407,7 +418,7 @@ header {
 /* Work-Section Design */
 
 #work-section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -416,6 +427,7 @@ header {
   color: white;
   text-align: center;
   gap: 50px;
+  border-bottom: 1px solid black;
 }
 
 .work-subheading {
@@ -435,7 +447,7 @@ header {
 
 .work-box {
   width: 100%;
-  height: 300px;
+  height: 65%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,14 +456,14 @@ header {
 }
 
 .workCard {
-  height: 100%;
-  width: 450px;
+  height: 50%;
+  width: 40%;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .workCard img {
@@ -515,8 +527,13 @@ header {
 /* Work Section Design For Mobile */
 
 @media screen and (max-width: 768px) {
+
+  #work-section {
+    height: 100vh;
+  }
+
   .work-heading {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .work-subheading {
@@ -526,5 +543,142 @@ header {
 
   .workCard {
     width: 80vw;
+    height: 30%;
   }
+}
+
+/* Skill Section Design */
+
+#skills-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  padding: 0px 20px;
+}
+
+#skills-section .skill-heading {
+  font-size: 42px;
+  color: #fd2155;
+  text-shadow: -5px 0px 0px #21fde7;
+}
+
+.skill-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-cards {
+  width: 350px;
+}
+
+.skill-cards.html {
+  background-color: #fff1e6;
+  padding: 10px 5px;
+  border: 5px solid orange;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.skill-cards-icon.html {
+  color: orange;
+  font-size: 60px;
+}
+
+.skill-cards.html h3 {
+  color: #c24a1d;
+  font-size: 24px;
+}
+
+.skill-cards.html p {
+  color: #5a2d1a;
+}
+
+.skill-cards.html:hover {
+  box-shadow: 5px 2px 5px orange;
+  transform: scale(1.01);
+}
+
+.skill-cards.css {
+  background-color: #eaf3ff;
+  padding: 10px 5px;
+  border: 5px solid blue;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.skill-cards-icon.css {
+  color: blue;
+  font-size: 60px;
+}
+
+.skill-cards.css h3 {
+  color: #1f5fcc;
+  font-size: 24px;
+}
+
+.skill-cards.css p {
+  color: #1e3a5f;
+}
+
+.skill-cards.css:hover {
+  box-shadow: 5px 2px 5px blue;
+  transform: scale(1.01);
+}
+
+.skill-cards.js {
+  background-color: #fff4cc;
+  padding: 10px 5px;
+  border: 5px solid yellow;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.skill-cards-icon.js {
+  color: yellow;
+  text-shadow: -2px 0px 0px black;
+  font-size: 60px;
+}
+
+.skill-cards.js h3 {
+  color: #b58b00;
+  font-size: 24px;
+}
+
+.skill-cards.js p {
+  color: #4a3f1a;
+}
+
+.skill-cards.js:hover {
+  box-shadow: 5px 2px 5px yellow;
+  transform: scale(1.01);
+}
+
+/* Skills Section Design For Mobile */
+
+@media screen and (max-width: 768px) {
+  .skill-cards {
+    max-width: 300px;
+  }
+
+  .skill-cards-icon.html,
+  .skill-cards-icon.css,
+  .skill-cards-icon.js {
+    font-size: 20px;
+  }
+
+  .skill-cards.html h3,
+  .skill-cards.css h3,
+  .skill-cards.css h3 {
+    font-size: 16px;
+  }
+
+
 }
