@@ -664,6 +664,10 @@ header {
 /* Skills Section Design For Mobile */
 
 @media screen and (max-width: 768px) {
+  #skills-section .skill-heading {
+    font-size: 35px;
+  }
+
   .skill-cards {
     max-width: 300px;
   }
@@ -680,5 +684,10 @@ header {
     font-size: 16px;
   }
 
+  .skill-cards.html p,
+  .skill-cards.css p, 
+  .skill-cards.js p {
+    font-size: 12px;
+  }
 
 }
