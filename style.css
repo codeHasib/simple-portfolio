@@ -807,9 +807,6 @@ header {
 
 @media screen and (max-width: 768px) {
 
-  #contact-section {
-  }
-
   #contact-section .contact-hire-bg h1 {
     font-size: 160px;
   }
