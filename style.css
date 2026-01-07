@@ -10,7 +10,7 @@ body {
   height: 100vh;
   width: 100%;
   max-width: 100%;
-  background-color: #2b2b2b;
+  background-color: #131313;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -307,8 +307,6 @@ header {
   }
 }
 
-
-
 /* Hero Contact Button Pop-Up Design */
 
 .hero-contact-popup {
@@ -428,6 +426,7 @@ header {
   text-align: center;
   gap: 50px;
   border-bottom: 1px solid black;
+  padding: 0px 20px;
 }
 
 .work-subheading {
@@ -527,7 +526,6 @@ header {
 /* Work Section Design For Mobile */
 
 @media screen and (max-width: 768px) {
-
   #work-section {
     height: 100vh;
   }
@@ -550,7 +548,7 @@ header {
 /* Skill Section Design */
 
 #skills-section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -559,6 +557,8 @@ header {
   gap: 30px;
   text-align: center;
   padding: 0px 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 
 #skills-section .skill-heading {
@@ -685,9 +685,150 @@ header {
   }
 
   .skill-cards.html p,
-  .skill-cards.css p, 
+  .skill-cards.css p,
   .skill-cards.js p {
     font-size: 12px;
   }
+}
 
+/* About Section Design */
+
+#about-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px 30px;
+  color: #f5eee6;
+  border-bottom: 1px solid black;
+  align-content: center;
+}
+
+#about-section .about-heading {
+  text-align: end;
+  font-size: 40px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+#about-section .about-name {
+  text-align: end;
+  line-height: 10px;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.about-name .about-name-subheading {
+  display: inline-block;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #f2dac6;
+}
+
+#about-section .about-bio {
+  text-align: end;
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+/* Contact Design */
+
+#contact-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-section .contact-hire-bg {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  font-size: 150px;
+  z-index: -1;
+  align-content: center;
+}
+
+.contact-hire-bg h1 {
+  opacity: 0.1;
+  color: #ffff;
+  text-align: end;
+}
+
+#contact-section .contact-info {
+  color: white;
+  text-align: end;
+  font-size: 60px;
+  width: 60%;
+}
+
+.contact-talk-link a {
+  text-align: end;
+  color: #ff5252;
+  font-size: 60px;
+  text-decoration: line-through;
+  transition: 0.3s ease;
+}
+
+.contact-talk-link a:hover{
+  text-decoration: none;
+}
+
+#contact-section .contact-talk-link {
+  width: 60%;
+  text-align: end;
+}
+
+#contact-section .contact-links {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  align-items: end;
+  width: 60%;
+}
+
+.contact-links a {
+  color: rgba(255, 255, 255, 0.452);
+  text-decoration: none;
+  font-weight: 100;
+  transition: 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+
+/* Contact Design For Mobiles */
+
+@media screen and (max-width: 768px) {
+
+  #contact-section {
+  }
+
+  #contact-section .contact-hire-bg h1 {
+    font-size: 160px;
+  }
+
+  #contact-section .contact-info {
+    width: 90%;
+    font-size: 30px;
+  }
+
+  #contact-section .contact-talk-link {
+    width: 90%;
+  }
+
+  #contact-section .contact-talk-link a {
+    font-size: 30px;
+  }
+
+  #contact-section .contact-links {
+    align-items: end;
+    width: 90%;
+  }
 }
