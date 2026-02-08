@@ -7,7 +7,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   max-width: 100%;
   background-color: #131313;
@@ -235,7 +235,7 @@ header {
 }
 
 #home-section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -244,7 +244,7 @@ header {
 }
 
 .hero-section {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -304,14 +304,14 @@ header {
 
 @media screen and (max-width: 768px) {
   #home-section {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
 /* Hero Contact Button Pop-Up Design */
 
 .hero-contact-popup {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: none;
   justify-content: center;
@@ -427,7 +427,7 @@ header {
   text-align: center;
   gap: 50px;
   border-bottom: 1px solid black;
-  padding: 0px 20px;
+  padding: 30px 30px;
 }
 
 .work-subheading {
@@ -447,7 +447,7 @@ header {
 
 .work-box {
   width: 100%;
-  height: 65%;
+  min-height: 65%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,8 +456,8 @@ header {
 }
 
 .workCard {
-  height: 50%;
-  width: 40%;
+  height: 250px;
+  width: 350PX;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -494,7 +494,7 @@ header {
   font-weight: bolder;
   border-radius: 30px;
   gap: 20px;
-  padding: 5px 10px;
+  padding: 15px 20px;
 }
 
 .work-title {
@@ -502,7 +502,7 @@ header {
 }
 
 .work-liveLink {
-  padding: 10px 15px;
+  padding: 5px 10px;
   border-radius: 30px;
   border: 1px solid rgb(255, 253, 253);
   transition: 0.3s ease-in;
@@ -511,7 +511,7 @@ header {
 .work-liveLink:hover {
   box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.476);
   background-color: #21fde7;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .work-liveLink:hover a {
@@ -528,7 +528,8 @@ header {
 
 @media screen and (max-width: 768px) {
   #work-section {
-    height: 100vh;
+    min-height: 100vh;
+    border-bottom: 1px solid black;
   }
 
   .work-heading {
@@ -541,8 +542,8 @@ header {
   }
 
   .workCard {
-    width: 80vw;
-    height: 30%;
+    width: 250px;
+    height: 250px;
   }
 }
 
